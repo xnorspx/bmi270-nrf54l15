@@ -1,0 +1,15 @@
+/*
+ * Board overlay for the XIAO nRF54L15.
+ *
+ * The board file already routes i2c22 to P1.10 / P1.11 (D4 / D5); this overlay
+ * only turns the bus on at 400 kHz.
+ *
+ * The BMI270 INT line (D0 = P1.04) is not declared here: a devicetree node
+ * without a compatible does not get phandle-array GPIO macros generated, so
+ * main.c builds the gpio_dt_spec for it directly instead.
+ */
+
+&i2c22 {
+	status = "okay";
+	clock-frequency = <400000>;
+};

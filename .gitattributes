@@ -1,0 +1,12 @@
+# 統一換行，避免 Windows 上整檔 diff。
+# 原始碼用 LF；PowerShell 腳本用 CRLF。
+* text=auto eol=lf
+
+*.ps1 text eol=crlf
+*.bat text eol=crlf
+*.cmd text eol=crlf
+
+# 二進位檔不做換行轉換，也不在 diff 顯示
+*.png binary
+*.jpg binary
+*.pdf binary

@@ -1,0 +1,11 @@
+# Verified working set on Python 3.14.7 / Windows 11.
+# Every version below was actually installed and exercised; do not bump blindly -
+# Python 3.14 is recent enough that several packages still need source builds.
+nicegui==4.0.0
+pywebview==6.2.1
+plotly==7.1.0
+bleak==3.1.0
+
+# already present globally and unchanged by this app
+# numpy==2.5.4
+# matplotlib==3.11.2   (only needed by the legacy Tk UI, not by app.py)
